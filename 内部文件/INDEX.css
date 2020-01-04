@@ -251,7 +251,7 @@
   padding-bottom: 0px;
   border: none;
 }
-.stage .home-page .content .about-us p {
+.stage .home-page .content .about-us p.details {
   margin-bottom: 20px;
   text-indent: 26px;
 }
