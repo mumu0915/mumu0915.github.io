@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .zuida .box {
+            width: 1140px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .zuida .box .card li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-right: 50px;
+        }
+
+        .zuida .box .card {
+            margin: 0;
+            padding: 0;
+            width: 33.33%;
+            float: left;
+        }
+
+        .zuida .box .card li p input {
+            width: 100%;
+            padding: 12px;
+            margin-right: 10px;
+            outline: none;
+            border: 1px solid white;
+        }
+
+        .zuida .box .card li p {
+            margin: 0;
+        }
+
+        .zuida .box .card h5 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0;
+        }
+        .zuida .box .card li p input:hover{
+            transition: all 0.5s;
+            border: 1px solid gold;
+        }
+        .zuida .hezi{
+            width: 1140px;
+            margin:0 auto;
+        }
+        .zuida .hezi .xx p input:hover{
+            transition: all 0.5s;
+            border: 1px solid gold;
+        }
+        .zuida .hezi .xx p input{
+            width: 100%;
+            height:330px;
+            border: 1px solid white;
+            outline: none;
+        }
+        .zuida .hezi .xx h4{
+            margin: 15px 0;
+            font-size: 20px;
+        }
+        .zuida .aa{
+            width: 1140px;
+            margin: 0 auto;
+        }
+        .zuida .aa span{
+            display: block;
+            background: green;
+            width: 13%;
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+        }
+        .zuida .aa span:hover{
+            background: gold;
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="zuida">
+        <div class="box">
+            <ul class="card">
+                <li>
+                    <h5>Name:</h5>
+                    <p><input type="text"></p>
+                </li>
+            </ul>
+            <ul class="card">
+                <li>
+                    <h5>Email:</h5>
+                    <p><input type="text"></p>
+                </li>
+            </ul>
+            <ul class="card">
+                <li>
+                    <h5>Subject :</h5>
+                    <p><input type="text"></p>
+                </li>
+            </ul>
+        </div>
+        <div class="hezi">
+            <div class="xx">
+            <h4>Message :</h4>
+            <p><input type="text"></p>
+            </div>
+        </div>
+        <div class="aa">
+            <span>SEND</span>
+        </div>
+    </div>
+</body>
+
+</html>

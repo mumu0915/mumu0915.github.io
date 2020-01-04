@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    .stage {
+        width: 100%;
+        max-width: 640px;
+        height: 640px;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+    <div class="stage">
+        <canvas id="canvas" style="width: 100%; height: 100%;"></canvas>
+    </div>
+    <script src="./preloadsheet.js"></script>
+    <script>
+        //artist  艺术家  direction  方向  crash  碰撞
+        // ctx.font = "30px Arial";
+        // 		ctx.fillStyle = "#333333";
+        // 		ctx.fillText(score, 10, 50);
+        var img = new Image()
+        img.src = "./preloadsheet.png";
+        var stage = document.getElementsByClassName("stage")[0]
+
+        function randomColor() {
+            return colorArr[Math.floor(Math.random() * colorArr.length)]
+        }
+
+        function rand(m, n) {
+            return Math.round(Math.random() * (n - m)) + m
+        }
+        var colorArr = [
+            "#FF9966",
+            "#FF6666",
+            "#99CCFF",
+            "#666633",
+            "#6699CC",
+            "#CCCCFF",
+            "#CC3399",
+            "#66CCCC",
+            "#CC0066",
+            "#ff3366",
+            "#33ccff",
+            "#FFB90F"
+        ];
+
+
+        /**@type{HTMLCanvasElement}*/
+        var canvas = document.getElementById("canvas")
+        var artist = canvas.getContext("2d")
+
+        var game = {
+            socre: 0,
+            stageW: parseInt(window.getComputedStyle(stage).width),
+            stageH: parseInt(window.getComputedStyle(stage).height),
+            frames: 0,
+            score: 0,
+            center: {
+                x: parseInt(window.getComputedStyle(stage).width) / 2,
+                y: parseInt(window.getComputedStyle(stage).height) / 2
+            },
+            max: 35,
+            min: 5,
+            speed: 3,
+            change: 1
+        }
+
+        var start_btn_png = {
+            name: "start_btn_png",
+            w: (game.stageW * 2) / 4,
+            h: ((file["start_btn_png"].h / file["start_btn_png"].w) * (game.stageW * 2)) / 4,
+            x: (game.stageW - (game.stageW * 2) / 4) / 2,
+            y: game.stageH / 2 + 50
+        };
+        var again_btn_png={
+            name: "again_btn_png",
+            w: (game.stageW * 2) / 4,
+            h: ((file["again_btn_png"].h / file["again_btn_png"].w) * (game.stageW * 2)) / 4,
+            x: (game.stageW - (game.stageW * 2) / 4) / 2,
+            y: game.stageH / 2 + 50
+        }
+
+        // 画出按钮
+        function drawBtn(obj) {
+            // console.log(file[btn]);
+            artist.drawImage(
+                img,
+                file[obj.name].x,
+                file[obj.name].y,
+                file[obj.name].w,
+                file[obj.name].h,
+                obj.x,
+                obj.y,
+                obj.w,
+                obj.h
+            );
+        }
+        canvas.width = game.stageW
+        canvas.height = game.stageH
+
+        //开始界面小球
+        var a = {
+            r: 50,
+            maxR: 50,
+            minR: 40,
+            zoom: false,
+            color: randomColor(),
+        };
+        var b = {
+            r: 30,
+            maxR: 30,
+            minR: 20,
+            zoom: false,
+            color: randomColor(),
+        };
+
+
+        // 我方球球
+        EnemyBall.prototype.moveBall = function (sx, sy) {
+            this.x += this.sx
+            this.y += this.sy
+        }
+
+
+        function OurBall() {
+            this.x = game.stageW / 2
+            this.y = game.stageH / 2
+            this.r = 5
+            this.color = randomColor()
+            this.light = {
+                x: this.x,
+                y: this.y,
+                r: this.r,
+                maxR: this.r + 5,
+                minR: this.r,
+                zoom: false,
+                color: "black",
+            }
+        }
+        var ourBall = new OurBall()
+        OurBall.prototype.updataCoord = function () {
+            drawRound(ourBall.x, ourBall.y, ourBall.r, ourBall.color, true)
+        }
+        // 敌方小球构造器
+        function EnemyBall(rand) {
+            this.r = rand
+            this.color = randomColor()
+            this.over = false
+            this.die = false
+        }
+        EnemyBall.prototype.checkOver = function () {
+            var xOver = this.x > game.stageW + this.r || this.x < -this.r
+            var yOver = this.y > game.stageH + this.r || this.y < -this.r
+            this.over = yOver || xOver
+        }
+        EnemyBall.prototype.ballPlace = function () {
+            var num = rand(0, 3)
+            var arr = [{
+                x: rand(-this.r, game.stageW + this.r),
+                y: -this.r,
+                sx: rand(-game.speed, game.speed),
+                sy: game.speed,
+            }, {
+                x: -this.r,
+                y: rand(-this.r, game.stageH + this.r),
+                sx: game.speed,
+                sy: rand(-game.speed, game.speed),
+            }, {
+                x: rand(-this.r, game.stageW + this.r),
+                y: game.stageH + this.r,
+                sx: rand(-game.speed, game.speed),
+                sy: -game.speed,
+            }, {
+                x: game.stageW + this.r,
+                y: rand(-this.r, game.stageH + this.r),
+                sx: rand(0, game.speed),
+                sy: rand(-game.speed, game.speed),
+            }]
+            this.x = arr[num].x
+            this.y = arr[num].y
+            this.sx = arr[num].sx
+            this.sy = arr[num].sy
+        }
+        var ballArr = []
+
+        function creatBall() {
+            var ball = new EnemyBall(rand(ourBall.r - ourBall.r / 2, ourBall.r + 20))
+            ball.ballPlace()
+            drawRound(ball.x, ball.y, ball.r, ball.color, true)
+            ballArr.push(ball)
+        }
+
+
+        function updataBall(obj) {
+            if (obj.zoom) {
+                obj.r -= 0.3
+                obj.zoom = obj.r <= obj.minR ? false : true
+            } else {
+                obj.r += 0.3
+                obj.zoom = obj.r >= obj.maxR ? true : false
+            }
+        }
+        //画出画布背景
+        function drawBg() {
+            artist.fillStyle = "#eaeaea";
+            artist.fillRect(0, 0, game.stageW, game.stageH)
+        }
+
+        function drawRound(x, y, r, color, direction) {
+            artist.beginPath()
+            artist.arc(x, y, r, 0, 2 * Math.PI)
+            artist.closePath()
+            if (direction) {
+                artist.fillStyle = color
+                artist.fill()
+            } else {
+                artist.strokeStyle = color
+                artist.stroke()
+            }
+
+        }
+        //检测碰撞的方法
+        function checkCrash(obj) {
+            var s = Math.sqrt((obj.x - ourBall.x) * (obj.x - ourBall.x) + (obj.y - ourBall.y) * (obj.y - ourBall.y))
+            if (s < obj.r + ourBall.r && !obj.over) {
+                console.log("他死了");
+                return true
+            }
+        }
+
+        function ready() {
+            updataBall(a)
+            updataBall(b)
+
+            drawRound(game.center.x - a.minR, game.center.y - a.maxR, a.r, a.color, true)
+            drawRound(game.center.x + b.minR, game.center.y - b.maxR, b.r, b.color, true)
+            drawBtn(start_btn_png)
+
+        }
+
+        function gameOver() {
+            clearInterval(timer)
+            console.log(file);
+            drawBtn(again_btn_png)
+            canvas.onclick = function (event) {
+            var xCrash = event.offsetX >= again_btn_png.x && event.offsetX <= again_btn_png.x + again_btn_png.w
+            var yCrash = event.offsetY >= again_btn_png.y && event.offsetY <= again_btn_png.y + again_btn_png.h
+            if (xCrash && yCrash) {
+                window.location.reload();
+            }
+            
+        }
+            if (localStorage.socre) {
+                var oldArr = JSON.parse(localStorage.socre)
+
+                for (var i = 0; i < oldArr.length; i++) {
+                    for (var key in oldArr[i]) {
+                        if (key == game.socre) {
+                            oldArr[i][key]++
+                            localStorage.socre = JSON.stringify(oldArr)
+                            return
+                        }
+                    }
+                }
+                var newSocre = {}
+                newSocre[game.score] = 1
+                oldArr.push(newSocre)
+                localStorage.socre = JSON.stringify(oldArr)
+
+            } else {
+                var newSocre = {}
+                newSocre[game.socre] = 1
+
+                localStorage.socre = JSON.stringify([newSocre])
+                console.log(localStorage);
+
+            }
+        }
+
+        function start() {
+            game.frames++
+            updataBall(ourBall.light)
+            drawRound(ourBall.x, ourBall.y, ourBall.light.r, ourBall.light.color, false)
+
+            if (!(game.frames % 15)) {
+
+                creatBall()
+            }
+            ballArr.forEach(function (e, i) {
+                e.moveBall(this.sx, this.sy)
+                drawRound(e.x, e.y, e.r, e.color, true)
+                if (checkCrash(e)) {
+                    if (e.r > ourBall.r) {
+                        gameOver()
+                        
+                    } else {
+                        e.die = true
+                        game.change++
+                        game.change = game.change > 5 ? 5 : game.change
+                        ourBall.r += e.r / 4
+                        ourBall.light.r += ourBall.r
+                        ourBall.light.minR= ourBall.r
+                        ourBall.light.maxR= ourBall.r+5
+                        game.socre++
+                    }
+                }
+                e.checkOver()
+            })
+            ourBall.updataCoord()
+            ballArr.forEach(function (e, i, arr) {
+
+                if (e.over || e.die) {
+                    ballArr.splice(i, 1)
+                }
+            })
+            artist.font = "30px Arial"
+            artist.fillText(game.socre, 10, 50)
+        }
+        timer = setInterval(function () {
+            artist.clearRect(0, 0, game.stageW, game.stageH)
+            drawBg()
+
+            if (!game.start) {
+                ready()
+            } else {
+                start()
+            }
+        }, 30)
+
+        canvas.onclick = function (event) {
+            var xCrash = event.offsetX >= start_btn_png.x && event.offsetX <= start_btn_png.x + start_btn_png.w
+            var yCrash = event.offsetY >= start_btn_png.y && event.offsetY <= start_btn_png.y + start_btn_png.h
+            if (xCrash && yCrash) {
+                game.start = true
+            }
+            if (Math.abs(event.offsetX - game.center.x) < 5 && Math.abs(event.offsetY - game.center.y) < 5) {
+                canvas.onmousemove = function (event) {
+
+                    ourBall.x = event.offsetX
+                    ourBall.y = event.offsetY
+                }
+            }
+            if (navigator.maxTouchPoints) {
+                canvas.ontouchmove = function (event) {
+
+                    ourBall.x = event.touches[0].pageX
+                    ourBall.y = event.touches[0].pageY
+
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>

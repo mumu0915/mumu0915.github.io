@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+.stage{
+    width: 200px;
+    margin: 50px auto 0;
+}
+.img{
+    width: 200px;
+    height: 200px;
+    background: aqua;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.img .ss{
+    width: 100%;
+    height: 100%;
+    background: url(./ss.png)no-repeat center center;
+    background-size: 100%;
+}
+.arrow{
+    width: 100%;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50px;
+    position: relative;
+}
+.arrow .box{
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    border: 2px solid aqua;
+    border-radius: 50px;
+    margin-left:-2px ;
+    margin-top:-2px ;
+}
+.arrow .box span{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: gold;
+    border-radius: 50%;
+   float:right;
+   font-size: 20px;
+   text-align: center;
+   line-height: 50px;
+}
+body{
+    -webkit-user-select:none; 
+       -moz-user-select:none; 
+       -ms-user-select:none; 
+       user-select:none;
+}
+p{
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: 16px;
+    text-align: center;
+}
+</style>
+<body>
+    <div class="stage">
+        <div class="img">
+            <div class="ss">
+
+            </div>
+        </div>
+        <div class="arrow">
+            <p>
+            将图片调整到合适角度
+            </p>
+            <div class="box">
+                <span>>></span>
+            </div>
+        </div>
+    </div>
+    <script src="./jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function(event){
+         rand=Math.floor(Math.random()*100)
+         var deg=(360/100)*rand
+         var scope=360-deg
+         
+         $(".ss").css({
+             transform:"rotate("+deg+"deg)",
+         })
+         $("span").mousedown(function(q){
+             $(this).css({
+                 background:"red",
+             })
+             $(".arrow").mousemove(function(e){
+                 e.preventDefault()
+                 
+                var x=e.clientX-q.clientX
+                x=x<0?0:x>150?150:x
+
+                $(".box").css({
+                    width:x+$("span").width(),
+                })
+                proportion=(x/parseInt($(".arrow").width()-$("span").width()))*360
+                $(".ss").css({
+                    transform:"rotate("+(proportion+deg)+"deg)",
+                    transition:"all 0s",
+                })
+             })
+         })
+         $("body").mouseup(function(){
+            $(".arrow").off("mousemove")
+            $(".box").animate({
+                    width:50,
+                },600)
+                $("span").css({
+                 background:"gold",
+             })
+             $(".ss").css({
+                 transform:"rotate("+deg+"deg)",
+                 transition:"all 0.6s",
+             })//5             //10     //15
+             
+             if(Math.abs(proportion-scope)<10&&proportion>5){
+                alert("验证成功")
+             } 
+        })
+        })
+        
+    </script>
+</body>
+</html>

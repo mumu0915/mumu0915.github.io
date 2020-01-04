@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./tixingtu.css">
+</head>
+
+<body>
+    <div class="stage">
+        <div class="bigbox">
+            <h3>STEPS</h3>
+            <h5>THIS WEEK</h5>
+            <div class="mask">
+                <span class="box">
+                    <i class="left">1000</i>
+                    <i class="right"></i>
+                    <i class="top">A</i>
+                </span>
+                <span class="box">
+                    <i class="left">1000</i>
+                    <i class="right"></i>
+                    <i class="top">B</i>
+                </span>
+                <span class="box">
+                    <i class="left">1000</i>
+                    <i class="right"></i>
+                    <i class="top">D</i>
+                </span>
+                <span class="box">
+                    <i class="left">1000</i>
+                    <i class="right"></i>
+                    <i class="top">E</i>
+                </span>
+                <span class="box">
+                    <i class="left">1000</i>
+                    <i class="right"></i>
+                    <i class="top">F</i>
+                </span>
+            </div>
+        </div>
+    </div>
+    <script>
+    var bigbox=document.getElementsByClassName("stage")[0]
+        var box=document.querySelectorAll(".box")
+        bigbox.onclick=function(){
+            bigbox.classList.toggle("active")                
+        }
+        // document.body.onmousedown=function(e){
+        //     var downx=e.clientX
+        //     var downy=e.clientY
+            
+        //     document.body.onmousemove=function(e){
+        //         e.preventDefault()
+        //         var movex=e.clientX
+        //         var movey=e.clientY
+        //        var numx=downx-movex
+        //        var numy=downy-movey
+        //         bigbox.style.transform="rotateY("+-numx/4*360/100+"deg)"+" "+"rotateX("+numy/4*360/100+"deg)"
+        //     }
+        // }
+        // document.body.onmouseup=function(){
+        //     document.body.onmousemove=null
+        // }
+    </script>
+</body>
+
+</html>

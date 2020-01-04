@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var word='MMD，我昨天买了车厘子，卧槽，太贵了，65块500g，卧槽这谁顶得住呀，沙雕商家，草，MMD，沙吹进我眼里了，MM，这话不是我说的';
+        var key = '卧槽'
+        var wordsDatabase = ['沙雕', 'MMD', '操', '草', '卧槽'];
+    
+        function name(str,key,char){
+            
+            var xxx=[]
+            for (var i = 0; i < key.length; i++) {
+                xxx.push('*')
+            }
+            var x=word
+            while(x.indxOf(key)!=-1){
+                x=x.replace(key,xxx.join(''))
+            }
+            return x
+        }
+        </script>
+</body>
+</html>

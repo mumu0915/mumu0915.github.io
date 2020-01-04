@@ -1,0 +1,59 @@
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.big{
+    width: 800px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top:50px;
+}
+.big .stage{
+    width: 50%;
+    float:left;
+}
+.big .stage ul li{
+    float:left;
+    width: 96px;
+    border:2px solid white;
+    
+}
+img{
+    width: 100%;
+    display:block;
+}
+.box{
+    position: relative;
+}
+.big .stage ul li.active{
+    border:2px solid red;
+}
+.stage .box .slider{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: rgba(0, 0, 0, .4);
+    left: 0;
+    top:0;
+}
+.stage .box .layer{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.magnify{
+    width: 400px;
+    height: 400px;
+    float:left;
+    display: none;
+    background:url(https://gd2.alicdn.com/imgextra/i2/292911747/O1CN01z6IXDA1OmAR9DnHaJ_!!292911747.jpg_400x400.jpg)no-repeat center center;
+    background-size:400%;
+
+}
+
+select{
+    position: relative;
+}

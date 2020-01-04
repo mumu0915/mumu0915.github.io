@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #canvas {
+        margin-left: 100px;
+    }
+</style>
+
+<body>
+    <canvas id="canvas" width="500" height="600"></canvas>
+    <script>
+        /**@type(HTMLCanvasElement)*/
+        var canvas = document.getElementById("canvas")
+        var dl = canvas.getContext("2d")
+        dl.beginPath()
+        dl.strokeStyle = "black"
+
+        dl.closePath()
+        dl.beginPath()
+        dl.arc(250, 150, 100, 0, Math.PI * 2)
+        dl.fillStyle = "rgb(41, 41, 221)"
+        dl.fill()
+        dl.closePath()
+
+        dl.beginPath()
+        dl.arc(250, 175, 80, 0, Math.PI * 2)
+        dl.fillStyle = "white"
+        dl.strokeStyle = "white"
+        dl.fill()
+        dl.stroke()
+        dl.closePath()
+
+
+
+        dl.beginPath()
+        dl.arc(250, 135, 15, 0, Math.PI * 2)
+        dl.fillStyle = "red"
+        dl.fill()
+        dl.stroke()
+        dl.closePath()
+
+        dl.beginPath()
+        dl.lineWidth = 2
+        dl.ellipse(230, 85, 21, 28, 0, 0, Math.PI * 2);
+        dl.fillStyle = "white";
+        dl.strokeStyle = "#000";
+        dl.fill();
+        dl.stroke();
+
+        dl.beginPath()
+        dl.lineWidth = 2
+        dl.ellipse(270, 85, 21, 28, 0, 0, Math.PI * 2);
+        dl.fillStyle = "white";
+        dl.strokeStyle = "#000";
+        dl.fill();
+        dl.stroke();
+
+        dl.beginPath()
+        dl.lineWidth = 2
+        dl.ellipse(260, 85, 8, 15, 0, 0, Math.PI * 2);
+        dl.fillStyle = "black";
+        dl.strokeStyle = "#000";
+        dl.fill();
+        dl.stroke();
+
+        dl.beginPath()
+        dl.arc(258, 90, 5, 0, Math.PI * 2)
+        dl.fillStyle = "white";
+        dl.fill()
+
+        dl.beginPath();
+        dl.moveTo(218, 95);
+        dl.quadraticCurveTo(227, 84, 243, 90);
+        dl.quadraticCurveTo(240, 70, 223, 77);
+        dl.stroke();
+
+        dl.beginPath();
+        dl.strokeStyle = "black"
+        dl.moveTo(224, 141)
+        dl.lineTo(163, 122)
+        dl.moveTo(224, 151)
+        dl.lineTo(160, 150)
+        dl.moveTo(224, 161)
+        dl.lineTo(165, 170)
+
+        // 170   330
+        dl.moveTo(276, 141)
+        dl.lineTo(336, 122)
+        dl.moveTo(276, 151)
+        dl.lineTo(340, 150)
+        dl.moveTo(276, 161)
+        dl.lineTo(335, 170)
+
+        dl.moveTo(250, 150)
+        dl.quadraticCurveTo(254, 185, 248, 205)
+        dl.moveTo(248, 205)
+        dl.quadraticCurveTo(210, 200, 190, 175)
+        dl.moveTo(248, 205)
+        dl.quadraticCurveTo(290, 200, 310, 175)
+        dl.stroke()
+
+        //铃铛带
+        dl.beginPath()
+        dl.lineWidth = 7
+        dl.moveTo(182, 230)
+        dl.lineTo(318, 230)
+        dl.lineCap = "round";
+        dl.strokeStyle = "red"
+        dl.stroke()
+        dl.closePath()
+
+        //身体
+        dl.beginPath()
+        dl.fillStyle="rgb(41, 41, 221)"
+        dl.fillRect(175, 234,150,167)
+        dl.fill()
+        dl.closePath()
+        //肚子
+        dl.beginPath()
+        dl.lineWidth = 5
+        dl.moveTo(205, 234)
+        dl.quadraticCurveTo(155, 345, 248, 350)
+        dl.moveTo(248, 350)
+        dl.quadraticCurveTo(350, 345, 298, 234)
+        dl.strokeStyle = "black"
+        dl.stroke()
+        dl.fillStyle = "white"
+        dl.fill()
+
+        dl.beginPath()
+        dl.lineWidth=1
+        dl.moveTo(299, 234)
+        dl.lineTo(204, 234)
+        dl.lineTo(248, 350)
+        dl.lineTo(258, 349)
+        dl.strokeStyle = "white"
+        dl.stroke()
+        dl.fillStyle = "white"
+        dl.fill()
+        //口袋
+        dl.beginPath()
+        dl.arc(248, 278, 40, 0, Math.PI)
+        dl.strokeStyle = "black"
+        dl.moveTo(208, 278)
+        dl.lineTo(288, 278)
+        dl.stroke()
+        dl.fillStyle = "white"
+        dl.fill()
+        //铃铛  136
+        dl.beginPath()
+        dl.lineWidth = 1
+        dl.arc(248, 248, 14, 0, 2 * Math.PI)
+        dl.strokeStyle = "black"
+        dl.fillStyle = "gold"
+        dl.stroke()
+        dl.fill()
+
+        dl.beginPath()
+        dl.moveTo(234, 248)
+        dl.lineTo(263, 248)
+        dl.moveTo(235, 244)
+        dl.lineTo(261, 244)
+        dl.strokeStyle = "black"
+        dl.stroke()
+
+        dl.beginPath()
+        dl.arc(248, 252, 4, 0, 2 * Math.PI)
+        dl.strokeStyle = "black"
+        dl.stroke()
+
+        //脚部填充
+        dl.beginPath()
+        dl.moveTo(174, 400)
+        dl.lineTo(245,429)
+        dl.lineTo(324, 400)
+        dl.fillStyle = "white"
+        dl.fill()
+
+        //左手
+        dl.beginPath()
+        dl.lineWidth = 3
+        dl.moveTo(190, 234)
+        dl.quadraticCurveTo(135, 240, 174, 348)
+        dl.strokeStyle = "black"
+        dl.stroke()
+        dl.fillStyle = "rgb(41, 41, 221)"
+        dl.fill()
+
+        dl.beginPath()
+        dl.lineWidth = 2
+        dl.moveTo(248,400)
+        dl.quadraticCurveTo(247,420,245,428)
+        dl.moveTo(245,428)
+        dl.quadraticCurveTo(140,440,175, 400)
+        dl.strokeStyle = "black"
+        dl.stroke()
+        dl.fillStyle = "white"
+        dl.fill()
+
+
+        //左腿
+        dl.beginPath()
+        dl.lineWidth = 3
+        dl.moveTo(180, 275)
+        dl.quadraticCurveTo(160, 323, 175, 400)
+        dl.moveTo(175, 400)
+        dl.quadraticCurveTo(206,420,248,400)
+        dl.moveTo(248,400)
+        dl.quadraticCurveTo(255,375,248,360)
+        dl.strokeStyle = "black"
+        dl.stroke()
+        dl.fillStyle = "rgb(41, 41, 221)"
+        dl.fill()
+
+
+        // 右脚
+        dl.beginPath()
+        dl.lineWidth = 2
+        dl.moveTo(245,428)
+        dl.quadraticCurveTo(360,442,325, 400)
+        dl.strokeStyle = "black"
+        dl.stroke()
+        dl.fillStyle = "white"
+        dl.fill()
+        // 右手
+        dl.beginPath()
+        dl.lineWidth = 3
+        dl.moveTo(310, 234)
+        dl.quadraticCurveTo(363, 240, 324, 340)
+        dl.strokeStyle = "black"
+        dl.stroke()
+        dl.fillStyle = "rgb(41, 41, 221)"
+        dl.fill()
+
+        // 右腿
+        dl.beginPath()
+        dl.lineWidth = 3
+        dl.moveTo(320, 275)
+        dl.quadraticCurveTo(340, 323, 325, 400)
+        dl.moveTo(325, 400)
+        dl.quadraticCurveTo(286,420,248,400)
+        dl.strokeStyle = "black"
+        dl.stroke()
+        dl.fillStyle = "rgb(41, 41, 221)"
+        dl.fill()
+
+        
+    </script>
+</body>
+
+</html>

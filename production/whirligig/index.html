@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    body {
+        background: aqua;
+    }
+
+    .box {
+        width: 1200px;
+        margin: 100px auto 0 auto;
+        height: 580px;
+        position: relative;
+    }
+
+    .slide {
+        width: 1200px;
+        height: 580px;
+        position: relative;
+    }
+
+    .slide ul li {
+        position: absolute;
+        transition: all 1s;
+
+        /* 	width: 400px;
+	top:0px;
+	left:50px;
+	opacity: 0.3;
+	z-index: 1; */
+
+        /* width: 600px;
+	top:50px;
+	left:0px;
+	opacity: 0.8;
+	z-index: 2; */
+
+        /* 	width:800px;
+	top:80px;
+	left:200px;
+	opacity: 1;
+	z-index: 3; */
+
+        /* width: 600px;
+	top:50px;
+	left:600px;
+	opacity: 0.8;
+	z-index: 2; */
+
+        /* width: 400px;
+	top:0px;
+	left:750px;
+	opacity: 0.3;
+	z-index: 1; */
+    }
+
+    .slide ul li img {
+        width: 100%;
+    }
+
+    .arrow {
+        width: 1200px;
+        position: absolute;
+        height: 112px;
+        top: 50%;
+        left: 0px;
+        margin-top: -56px;
+        z-index: 5;
+        opacity: 0;
+        transition: all 1s;
+    }
+
+    .arrow .prev {
+        width: 76px;
+        height: 112px;
+        background: url(./img/prev.png) no-repeat center center;
+        display: block;
+        float: left;
+    }
+
+    .arrow .next {
+        width: 76px;
+        height: 112px;
+        background: url(./img/next.png) no-repeat center center;
+        display: block;
+        float: right;
+    }
+
+    .box:hover .arrow {
+        opacity: 1;
+    }
+</style>
+
+<body>
+    <div class="box" id="box">
+        <div class="slide" id="slide">
+            <ul>
+                <li>
+                    <img src="img/slidepic1.png" alt="">
+                </li>
+                <li>
+                    <img src="img/slidepic2.png" alt="">
+                </li>
+                <li>
+                    <img src="img/slidepic3.png" alt="">
+                </li>
+                <li>
+                    <img src="img/slidepic4.png" alt="">
+                </li>
+                <li>
+                    <img src="img/slidepic5.png" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="arrow">
+            <a href="javascript:;" class="prev">
+            </a>
+            <a href="javascript:;" class="next">
+            </a>
+        </div>
+    </div>
+    <script>
+        var json = [{
+            width: 400,
+            top: 0,
+            left: 50,
+            opacity: 0.3,
+            zIndex: 1
+        }, {
+            width: 600,
+            top: 50,
+            left: 0,
+            opacity: 0.8,
+            zIndex: 2,
+        }, {
+            width: 800,
+            top: 80,
+            left: 200,
+            opacity: 1,
+            zIndex: 3,
+        }, {
+            width: 600,
+            top: 50,
+            left: 600,
+            opacity: 0.8,
+            zIndex: 2,
+        }, {
+            width: 400,
+            top: 0,
+            left: 750,
+            opacity: 0.3,
+            zIndex: 1,
+        }]
+        var stage = document.getElementsByClassName("box")[0]
+        var lis = document.getElementsByTagName("li")
+        var arrow = stage.children[1].children
+        var btn = true
+
+        for ( as in arrow) {
+            arrow[as].onclick = function () {
+                if (btn) {
+                    btn = false
+
+                    fun(this.className == "next")
+                    setTimeout(() => {
+                        btn=true
+                    }, 1000);
+                }
+            }
+        }
+        fun()
+
+        function fun(flag) {
+            if (flag) {
+                json.push(json.shift())
+            } else {
+                json.unshift(json.pop())
+            }
+            for (let i = 0; i < lis.length; i++) {
+                lis[i].style.width = json[i].width + "px"
+                lis[i].style.top = json[i].top + "px"
+                lis[i].style.left = json[i].left + "px"
+                lis[i].style.opacity = json[i].opacity
+                lis[i].style.zIndex = json[i].zIndex
+            }
+        }
+    </script>
+</body>
+
+</html>

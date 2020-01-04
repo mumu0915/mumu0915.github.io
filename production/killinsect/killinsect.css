@@ -1,0 +1,1069 @@
+body .fl {
+  float: left;
+}
+body ul,
+body ol,
+body li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+body .fr {
+  float: right;
+}
+body a:hover {
+  text-decoration: none;
+}
+h2.title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  color: #222222;
+  font-weight: 600;
+  margin: 0;
+  position: relative;
+}
+h2.title::after {
+  content: url(img/icon/shape.png);
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -36px;
+}
+.title-txt {
+  max-width: 55%;
+  margin: 0 auto;
+}
+.title-txt p {
+  color: #555555;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+.headers {
+  margin-top: -12px;
+  margin-bottom: 52px;
+}
+.common {
+  padding: 110px 0;
+}
+.header-area .head-box a {
+  padding-left: 15px;
+  color: white;
+}
+.header-area .head-box a:hover {
+  color: orange;
+}
+.header-area .head-box .head-contact {
+  color: white;
+  padding: 15px 0;
+  background: #011a48;
+  font-size: 16px;
+}
+.header-area .head-box .head-contact .head-icon span {
+  padding: 5px 0;
+  margin-right: 25px;
+  padding-right: 25px;
+  line-height: 20px;
+}
+.header-area .head-box .head-contact .head-icon span:first-child {
+  position: relative;
+}
+.header-area .head-box .head-contact .head-icon span:first-child:after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background: #083281;
+  text-align: center;
+}
+.header-area .head-box .head-contact .head-nav ul li {
+  float: left;
+  margin-left: 25px;
+  font-size: 16px;
+  line-height: 20px;
+}
+.header-area .head-box .head-nav-box {
+  background: white;
+  width: 100%;
+}
+.header-area .head-box .head-nav-box .head-nav {
+  transition: all 0.5s;
+}
+.header-area .head-box .head-nav-box .head-nav nav h1 a {
+  margin: auto 0;
+  padding-left: 0;
+}
+.header-area .head-box .head-nav-box .head-nav nav .navbar-nav a {
+  color: black;
+  font-size: 16px;
+  padding: 29px 15px;
+}
+.header-area .head-box .head-nav-box .head-nav nav .navbar-nav a:last-child {
+  padding-right: 0;
+}
+.header-area .head-box .head-nav-box .head-nav nav .navbar-nav a:hover {
+  color: orange;
+}
+main .nav-box {
+  font-size: 10px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+main .nav-box .btn-box {
+  background: white;
+  position: relative;
+  overflow: hidden;
+  padding: 1em 1.5em 0 0;
+}
+main .nav-box .btn-box h1 {
+  float: left;
+  width: 100%;
+  max-width: 140px;
+}
+main .nav-box .btn-box .nav-btn {
+  background: transparent;
+  border: none;
+  padding: 1em;
+  outline: none;
+  float: right;
+}
+main .nav-box .btn-box .nav-btn span i {
+  display: block;
+  width: 3em;
+  height: 3px;
+  background: black;
+  margin-top: 5px;
+}
+main .nav-box .btn-box .nav-btn span:hover i {
+  background: orange;
+  width: 2.3em;
+  transition: all 0.5s;
+}
+main .nav-box .btn-box .nav-btn span:hover i:nth-child(2) {
+  width: 3em;
+}
+main .nav-box .storage-box {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  left: -340px;
+  opacity: 0;
+}
+main .nav-box .storage-box .storage-fixed {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+  visibility: hidden;
+}
+main .nav-box .storage-box .storage-fixed .nav-page {
+  width: 300px;
+  background: white;
+  padding: 2em;
+  height: 100%;
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 99;
+  transition: all 0.4s;
+}
+main .nav-box .storage-box .storage-fixed .nav-page .form-group {
+  width: 100%;
+  position: relative;
+}
+main .nav-box .storage-box .storage-fixed .nav-page .form-group .form-controls {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  color: #666;
+  font-size: 13px;
+  border: none;
+  padding: 0 40px 0 10px;
+  background-color: #f2f2f2;
+}
+main .nav-box .storage-box .storage-fixed .nav-page .form-group .btn {
+  position: absolute;
+  top: 0;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  right: 0;
+}
+main .nav-box .storage-box .storage-fixed .nav-page .navbar-nav {
+  margin-top: 30px;
+}
+main .nav-box .storage-box .storage-fixed .nav-page .navbar-nav a {
+  color: black;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+main .nav-box .storage-box .storage-fixed .nav-page .navbar-nav a:hover {
+  color: orange;
+}
+main .nav-box .storage-box .storage-fixed .nav-page .nav-contact {
+  position: absolute;
+  bottom: 5em;
+  left: 2em;
+}
+main .nav-box .storage-box .storage-fixed .nav-page .nav-contact a {
+  color: black;
+}
+main .nav-box .storage-box .storage-fixed .nav-page .nav-contact a:hover {
+  color: orange;
+}
+main .nav-box .storage-box .storage-fixed .nav-page .nav-contact .contact {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+main .nav-box .storage-box .storage-fixed .nav-page .nav-contact .contact li span i {
+  margin-right: 10px;
+}
+main .nav-box .storage-box .storage-fixed .nav-page .nav-contact .contact li:first-child {
+  margin-bottom: 10px;
+}
+main .nav-box .storage-box .storage-fixed .nav-page .nav-contact .contact li:first-child span i {
+  font-size: 25px;
+  margin-right: 15px;
+}
+main .nav-box .storage-box .storage-fixed .nav-page .nav-contact .contact-icon li {
+  float: left;
+  font-size: 16px;
+  color: #555555;
+  margin-right: 1em;
+}
+main .nav-box .storage-box .storage-fixed .nav-page .close-btn {
+  width: 40px;
+  height: 40px;
+  background: orange;
+  outline: none;
+  font-size: 20px;
+  border: none;
+  padding: 0;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: -40px;
+  z-index: 999;
+}
+main .nav-box .storage-box .storage-fixed .nav-page .close-btn span {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+  line-height: 40px;
+  transform: rotateZ(0deg);
+}
+main .nav-box .storage-box .storage-fixed .nav-page .close-btn span:hover {
+  transform: rotateZ(-200deg);
+}
+main .nav-box .storage-box .storage-fixed .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 300px;
+  top: 0;
+  display: none;
+}
+main .storage-box.unlock {
+  left: 0px;
+  opacity: 1;
+}
+main .appointment-box .appoint-inner {
+  display: flex;
+  justify-content: space-between;
+}
+main .appointment-box .appoint-inner .inner-fl {
+  width: 100%;
+  max-width: 780px;
+}
+main .appointment-box .appoint-inner .inner-fl ul {
+  width: 100%;
+  height: 100%;
+}
+main .appointment-box .inner-content > li {
+  float: left;
+  width: 20%;
+  height: 100%;
+  border-right: 1px solid #e5e5e5;
+}
+main .appointment-box .inner-content > li input {
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+}
+main .appointment-box .inner-content > li:first-child {
+  width: 30%;
+  background: white;
+  position: relative;
+  padding-left: 18px;
+  padding-right: 30px;
+}
+main .appointment-box .inner-content > li:first-child p {
+  line-height: 70px;
+  margin: 0;
+  color: #555555;
+}
+main .appointment-box .inner-content > li:first-child .select-btn {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  color: #848181;
+  font-size: 18px;
+}
+main .appointment-box .inner-content > li:first-child .select-btn i {
+  transition: all 0.2s;
+}
+main .appointment-box .inner-content > li:last-child {
+  width: 30%;
+}
+main .appointment-box .inner-content > li .inner-list {
+  left: 0;
+  top: 100%;
+  width: 100%;
+  position: absolute;
+  background: white;
+  margin-top: 3px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  transform: scale(0.6) translateY(-34%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+}
+main .appointment-box .inner-content > li .inner-list ol li {
+  padding: 0 29px 0 18px;
+  line-height: 40px;
+  color: #555555;
+  font-size: 14px;
+}
+main .appointment-box .inner-content > li .inner-list ol li.active {
+  font-weight: 800;
+}
+main .appointment-box .inner-content > li .inner-list ol li:first-child {
+  background: #f6f6f6;
+}
+main .appointment-box .inner-content > li .inner-list.off {
+  transform: scale(1) translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
+main .appointment-box .inner-content > li .inner-list.on {
+  transform: scale(0.6) translateY(-34%);
+  visibility: hidden;
+  opacity: 0;
+}
+main .appointment-box .appoint-wrapper {
+  padding: 60px;
+  border-radius: 5px;
+  background: url(img/bg/appointment-form.png) no-repeat center;
+  background-size: cover;
+}
+main .appointment-box .appoint-wrapper h3 {
+  color: #fff;
+  margin: 0;
+  margin-top: -5px;
+  padding-bottom: 30px;
+}
+main .appointment-box .appoint-wrapper .inner-fr {
+  margin-left: 10px;
+  background: orange;
+  height: 70px;
+}
+main .appointment-box .appoint-wrapper .inner-fr a {
+  display: inline-block;
+  text-align: center;
+  padding: 0 45px;
+  line-height: 70px;
+  color: white;
+  transition: all 0.6s;
+  font-size: 16px;
+  word-wrap: break-word;
+}
+main .appointment-box .appoint-wrapper .inner-fr:hover {
+  color: #fff;
+  background-color: #222222;
+}
+main .about-us .about-box {
+  display: flex;
+  align-items: center;
+}
+main .about-us .about-us-txt p {
+  margin: 0;
+  color: #555555;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 8px;
+}
+main .about-us .about-us-txt .contact-way {
+  margin-top: 42px;
+}
+main .about-us .about-us-txt .contact-way p {
+  float: left;
+  margin-right: 25px;
+  transition: all 0.4s;
+}
+main .about-us .about-us-txt .contact-way p:hover {
+  color: orange;
+  cursor: pointer;
+}
+main .about-us .about-us-txt .contact-way p span {
+  margin-right: 15px;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: orange;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 42px;
+}
+main .about-us .about-us-txt .contact-way p:last-child span {
+  background: #152545;
+}
+main .pest-problem {
+  padding: 110px 0;
+  background: #f3f5f6;
+  text-align: center;
+}
+main .pest-problem .pests li {
+  flex-grow: 1;
+}
+main .pest-problem .pests li .pest-appearance {
+  width: 110px;
+  height: 110px;
+  border: 10px solid white;
+  border-radius: 50%;
+  line-height: 90px;
+  text-align: center;
+  margin: 0 auto;
+}
+main .pest-problem .pests li .pest-message {
+  margin-top: 30px;
+}
+main .pest-problem .pests li .pest-message .pest-name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  display: block;
+  margin-top: 18px;
+  font-size: 16px;
+  color: #5f5f5f;
+  transition: all 0.4s;
+}
+main .pest-problem .pests li .pest-message .pest-name:hover {
+  color: orange;
+}
+main .pest-problem .pests li .pest-message:hover {
+  cursor: pointer;
+}
+main .pest-problem .pests li .pest-message:hover .pest-appearance {
+  border-color: orange !important;
+}
+main .our-service {
+  padding: 110px 0;
+  text-align: center;
+}
+main .our-service .silder-txt-box {
+  overflow: hidden;
+  user-select: none;
+}
+main .our-service .silder-txt-box ul {
+  width: 300%;
+  margin-left: -99.99999999%;
+}
+main .our-service .silder-txt-box ul li {
+  margin: 30px 0;
+  padding: 0 15px;
+  float: left;
+  width: 11.11111111%;
+}
+main .our-service .silder-txt-box ul li .txt-box {
+  padding: 55px 30px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+main .our-service .silder-txt-box ul li .txt-box h6 {
+  font-size: 20px;
+  padding-bottom: 23px;
+  font-weight: 600;
+  margin: 0;
+  color: #222222;
+}
+main .our-service .silder-txt-box ul li .txt-box p {
+  font-family: "Open Sans", sans-serif;
+  color: #555555;
+  font-size: 16px;
+  font-weight: 400;
+}
+main .our-service .silder-txt-box ul li .txt-box a {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #222222;
+}
+main .our-service .silder-txt-box ul li .txt-box:hover {
+  background: orange;
+}
+main .our-service .silder-txt-box ul li .txt-box:hover h6,
+main .our-service .silder-txt-box ul li .txt-box:hover p,
+main .our-service .silder-txt-box ul li .txt-box:hover a {
+  color: white;
+}
+main .testimonial-box {
+  background: #f3f5f6;
+  display: flex;
+}
+main .testimonial-box .testimonial-img {
+  margin: auto;
+  width: 300px;
+  overflow: hidden;
+}
+main .testimonial-box .testimonial-img ul {
+  width: 250%;
+  margin-left: -200px;
+}
+main .testimonial-box .testimonial-img ul li {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: scale(0.66);
+  transition: all 0.6s;
+  float: left;
+}
+main .testimonial-box .testimonial-img ul li img {
+  width: 100%;
+}
+main .testimonial-box .testimonial-img ul li.active {
+  transform: scale(1);
+}
+main .testimonial-box .testimonial-txt {
+  max-width: 815px;
+  margin: 25px auto -8px;
+  text-align: center;
+  overflow: hidden;
+}
+main .testimonial-box .testimonial-txt ol {
+  width: 700%;
+  margin-left: -300%;
+}
+main .testimonial-box .testimonial-txt ol li {
+  width: 14.28571428%;
+  float: left;
+}
+main .testimonial-box .testimonial-txt ol li p {
+  font-size: 20px;
+  color: #222222;
+  font-weight: 300;
+  margin: 6px 0 30px 0;
+  font-family: "Open Sans", sans-serif;
+}
+main .testimonial-box .testimonial-txt ol li h6 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+main .counterup-area {
+  background: url(img/bg/pattern.jpg) no-repeat center;
+  background-size: cover;
+}
+main .counterup-area .counterup-box .counterup {
+  text-align: center;
+}
+main .counterup-area .counterup-box .counterup p {
+  margin: 0;
+  font-size: 0;
+}
+main .counterup-area .counterup-box .counterup p span {
+  font-size: 48px;
+  color: #f7941d;
+  font-weight: 600;
+}
+main .counterup-area .counterup-box .counterup .counterup-title {
+  padding-top: 5px;
+  color: #222222;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+main .blog-area {
+  text-align: center;
+}
+main .blog-area .blog-txt-box {
+  overflow: hidden;
+  user-select: none;
+}
+main .blog-area .blog-txt-box ul {
+  width: 300%;
+  margin-left: -99.99999999%;
+}
+main .blog-area .blog-txt-box ul li {
+  margin: 30px 0;
+  padding: 0 15px;
+  float: left;
+  width: 11.11111111%;
+}
+main .blog-area .blog-txt-box ul li .caption {
+  border: 1px solid #f5f5f5;
+  border-top: 0;
+  padding: 32px 25px 35px;
+  border-radius: 0 0 5px 5px;
+  text-align: left;
+}
+main .blog-area .blog-txt-box ul li .caption p {
+  margin: 0;
+}
+main .blog-area .blog-txt-box ul li .caption p span {
+  color: #444444;
+  font-size: 14px;
+  display: inline-block;
+  margin-right: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+main .blog-area .blog-txt-box ul li .caption p span:first-child::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 15px;
+  background: #e5e5e5;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main .blog-area .blog-txt-box ul li .caption h5 a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222222;
+  transition: all 0.5s;
+}
+main .blog-area .blog-txt-box ul li .caption h5 a:hover {
+  color: orange;
+}
+main .blog-area .blog-txt-box ul li .caption .blog-group-btn {
+  margin-top: 30px;
+}
+main .blog-area .blog-txt-box ul li .caption .blog-group-btn span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222222;
+  transition: all 0.5s;
+}
+main .blog-area .blog-txt-box ul li .caption .blog-group-btn span i {
+  margin-right: 5px;
+}
+main .blog-area .blog-txt-box ul li .caption .blog-group-btn span:hover {
+  color: orange;
+}
+main .blog-area .blog-txt-box ul li .blog-img {
+  overflow: hidden;
+}
+main .blog-area .blog-txt-box ul li .blog-img img {
+  width: 100%;
+  transition: all 0.5s;
+}
+main .blog-area .blog-txt-box ul li:hover .blog-img img {
+  transform: scale(1.25);
+}
+main .silder-box {
+  position: relative;
+}
+main .silder-box:hover #carouselExampleFade .arrow span.btn {
+  opacity: 1;
+  right: 50px;
+}
+main .silder-box:hover #carouselExampleFade .arrow span.btn:first-child {
+  left: 50px;
+}
+main .silder-box .carousel-item {
+  background: url(img/slider/home1-slide1.jpg) no-repeat center;
+  background: cover;
+}
+main .silder-box .carousel-item:last-child {
+  background: url(img/slider/home2-slide1.jpg) no-repeat center;
+}
+main .silder-box #carouselExampleFade ol.carousel-indicators {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  margin: 0;
+  bottom: 15px;
+}
+main .silder-box #carouselExampleFade ol.carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: transparent;
+  border: 2px solid #777777;
+}
+main .silder-box #carouselExampleFade ol.carousel-indicators li.active {
+  background: orange;
+  border-color: orange;
+}
+main .silder-box #carouselExampleFade .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 100%;
+}
+main .silder-box #carouselExampleFade .arrow span.btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: white;
+  font-size: 35px;
+  color: black;
+  border-radius: 50%;
+  line-height: 37px;
+  float: right;
+  opacity: 0;
+  position: relative;
+  right: 0;
+  transition: all 0.6s;
+}
+main .silder-box #carouselExampleFade .arrow span.btn:first-child {
+  left: 0;
+  float: left;
+}
+main .silder-box #carouselExampleFade .arrow span.btn:hover {
+  background: orange;
+  color: white;
+}
+main .silder-text {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  transform: translateY(-50%);
+}
+main .silder-text h5 {
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.3;
+  padding-bottom: 16px;
+  margin: 0;
+}
+main .silder-text h2 {
+  color: #fff;
+  font-size: 50px;
+  line-height: 1.2;
+  margin: 0;
+}
+main .silder-text h2 span {
+  display: block;
+}
+main .silder-text a {
+  display: inline-block;
+  padding: 18px 34px;
+  margin-top: 32px;
+  background: orange;
+  color: white;
+  transition: all 0.6s;
+  font-size: 16px;
+}
+main .silder-text a:hover {
+  color: #fff;
+  background-color: #222222;
+}
+.footer-area {
+  background: #f3f5f6;
+}
+.footer-area h3 {
+  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.footer-area p {
+  font-size: 14px;
+  color: #222222;
+  font-weight: 400;
+}
+.footer-area a {
+  color: #222222;
+  transition: all 0.5s;
+}
+.footer-area a:hover {
+  margin-left: 10px;
+  color: orange;
+}
+.footer-area .footer-box li {
+  margin-bottom: 13px;
+}
+.footer-area .footer-box.active li a {
+  color: #222222;
+  font-size: 13px;
+}
+.footer-area .footer-inp {
+  position: relative;
+  margin-bottom: 15px;
+}
+.footer-area .footer-inp input {
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+  padding: 5px 55px 5px 10px;
+  background: #e5e5e5;
+  font-size: 12px;
+  border: none;
+  outline: none;
+}
+.footer-area .footer-inp .footer-btn {
+  position: absolute;
+  right: 0;
+  background: orange;
+  height: 44px;
+  padding: 0 15px;
+  color: white;
+  border: none;
+  outline: none;
+}
+.footer-area .footer-inp .footer-btn:hover {
+  background: black;
+}
+.footer-area .contact a {
+  transition: all 0.5s;
+  margin-right: 15px;
+}
+.footer-area .contact a:hover {
+  color: orange;
+  margin-left: 0px;
+}
+@media (max-width: 1599.98px) {
+  main .silder-box .carousel-item {
+    height: 650px;
+  }
+}
+@media (max-width: 1399px) {
+  main .silder-box .carousel-item {
+    height: 500px;
+  }
+}
+@media (max-width: 1199px) {
+  main .silder-box .carousel-item {
+    height: 500px;
+  }
+  main .silder-text h5 {
+    font-size: 18px;
+  }
+  main .silder-text h2 {
+    font-size: 50px;
+  }
+  main .silder-text a {
+    padding: 15px 25px;
+  }
+  main .appointment-box .appoint-wrapper .appoint-inner .inner-fr a {
+    line-height: 1;
+  }
+}
+@media (max-width: 991px) {
+  main .container {
+    max-width: 1200px;
+  }
+  main .silder-box .carousel-item {
+    height: 400px;
+  }
+  main .silder-box .silder-text h5 {
+    font-size: 18px;
+  }
+  main .silder-box .silder-text h2 {
+    font-size: 30px;
+  }
+  main .silder-box .silder-text a {
+    padding: 15px 25px;
+  }
+  main .appointment-box .container {
+    max-width: 1200px;
+  }
+  main .appointment-box .container .appoint-wrapper .appoint-inner {
+    display: flex;
+    flex-direction: column;
+  }
+  main .appointment-box .container .appoint-wrapper .appoint-inner ul > li {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    margin-bottom: 20px;
+  }
+  main .appointment-box .container .appoint-wrapper .appoint-inner .inner-fr {
+    width: 100%;
+    max-width: 780px;
+    margin: 0;
+  }
+  main .appointment-box .container .appoint-wrapper .appoint-inner .inner-fr a {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 0 45px;
+    color: white;
+    transition: all 0.6s;
+    font-size: 16px;
+    word-wrap: break-word;
+  }
+  main .appointment-box .container .appoint-wrapper .appoint-inner .inner-fr a:hover {
+    color: #fff;
+    background-color: #222222;
+  }
+  main .common .headers h2.title {
+    font-size: 36px;
+  }
+  main .about-us .about-box .about-us-txt .contact-way {
+    margin-top: 35px;
+  }
+  main .about-us .about-box .about-us-img {
+    margin-top: 62px;
+    text-align: center;
+  }
+  main .pest-problem .pests li .pest-message {
+    margin-top: 30px;
+  }
+  main .pest-problem .problem-head {
+    margin-bottom: 52px;
+  }
+  main .pest-problem .problem-head .problem-title h2 {
+    font-size: 36px;
+    padding-top: 5px;
+  }
+  main .our-service .silder-txt-box {
+    overflow: hidden;
+    user-select: none;
+  }
+  main .our-service .silder-txt-box ul {
+    width: 450%;
+    margin-left: -150%;
+  }
+  main .our-service .silder-txt-box ul li {
+    margin: 30px 0;
+    padding: 0 15px;
+    float: left;
+    width: 11.11111111%;
+  }
+  main .blog-area .blog-txt-box ul {
+    width: 450%;
+    margin-left: -150%;
+  }
+}
+@media (max-width: 768px) {
+  footer .common {
+    padding: 63px 0;
+  }
+  footer .common .headers h2.title {
+    font-size: 24px;
+  }
+  footer .common .headers .title-txt {
+    max-width: 71%;
+  }
+  main .common {
+    padding: 63px 0;
+  }
+  main .common .headers h2.title {
+    font-size: 24px;
+  }
+  main .common .headers .title-txt {
+    max-width: 71%;
+  }
+  main .our-service .silder-txt-box {
+    overflow: hidden;
+    user-select: none;
+  }
+  main .our-service .silder-txt-box ul {
+    width: 900%;
+    margin-left: -300%;
+  }
+  main .our-service .silder-txt-box ul li {
+    margin: 30px 0;
+    padding: 0 15px;
+    float: left;
+    width: 11.11111111%;
+  }
+  main .blog-area .blog-txt-box ul {
+    width: 900%;
+    margin-left: -300%;
+  }
+  main .counterup-area .counterup-box .counterup p span {
+    font-size: 36px;
+  }
+  main .counterup-area .counterup-box .counterup .counterup-title {
+    font-size: 16px;
+  }
+  .pest-problem .pests li .pest-message {
+    margin-top: 30px;
+  }
+  .pest-problem .problem-head {
+    margin-bottom: 35px;
+  }
+  .pest-problem .problem-head .problem-title h2 {
+    font-size: 24px;
+    padding-top: 5px;
+  }
+}
+@media (max-width: 576px) {
+  footer .common {
+    padding: 63px 0;
+  }
+  footer .common .headers h2.title {
+    font-size: 24px;
+  }
+  footer .common .headers .title-txt {
+    max-width: 71%;
+  }
+  main .common {
+    padding: 63px 0;
+  }
+  main .common .headers .title-txt {
+    max-width: 83%;
+  }
+  main .silder-box .carousel-item {
+    height: 350px;
+  }
+  main .silder-box .silder-text h5 {
+    font-size: 18px;
+  }
+  main .silder-box .silder-text h2 {
+    font-size: 25px;
+  }
+  main .silder-box .silder-text a {
+    padding: 15px 25px;
+  }
+  main .appointment-box .container .appoint-wrapper {
+    padding: 60px 15px;
+  }
+  main .appointment-box .container .appoint-wrapper h3 {
+    font-size: 22px;
+  }
+  main .about-us .about-box .about-us-txt h2 {
+    font-size: 24px;
+  }
+  main .about-us .about-box .about-us-txt .contact-way {
+    margin-top: 35px;
+  }
+  main .about-us .about-box .about-us-img {
+    margin-top: 62px;
+    text-align: center;
+  }
+  main .pest-problem .pests li .pest-message {
+    margin-top: 0;
+  }
+  main .pest-problem .problem-head {
+    margin-bottom: 35px;
+  }
+  main .pest-problem .problem-head .problem-title h2 {
+    font-size: 24px;
+    padding-top: 5px;
+  }
+}
+/*# sourceMappingURL=./killinsect.css.map */

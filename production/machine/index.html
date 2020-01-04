@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body{
+            background: #eeeeee;
+        }
+        .stage {
+            width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .stage img {
+            width: 100%;
+        }
+
+        .number {
+            position: absolute;
+            top: 46px;
+            left: 52px;
+            width: 335px;
+            height: 155px;
+        }
+
+        .number span {
+            display: inline-block;
+            position: absolute;
+            margin: 0;
+            width: 100px;
+            height: 100%;
+            background: url('./2345_image_file_copy_2.jpg');
+            background-size: 100%;
+            background-position-y: 120px;
+            border-radius: 10px;
+        }
+
+        .number span:nth-child(2) {
+            left: 118px;
+        }
+
+        .number span:nth-child(3) {
+            left: 238px;
+        }
+
+        .btn {
+            width: 222px;
+            height: 63px;
+            position: absolute;
+            top: 183px;
+            left: 52px;
+        }
+    </style>
+    <div class="stage">
+        <img src="./2345_image_file_copy_1.jpg" alt="">
+        <div class="number">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="btn">
+
+            </div>
+        </div>
+        <script>
+            var stage = document.querySelector('.stage')
+            var btn = document.querySelector('.btn')
+            var spans = document.querySelectorAll('.number span')
+            var numbers = 1030 / 11
+
+
+            var current = 0
+            var chec = true
+            btn.onclick = function () {
+                if (chec) {
+                    chec = false
+                    current++
+                    current = current > 2 ? 0 : current
+                    spans.forEach(function (element, index) {
+
+                        var randoms = Math.floor(Math.random() * 11)
+
+                        spans[index].style.backgroundPositionY = -numbers * randoms - 10300 + 35 + 'px'
+                        spans[index].style.transition = 'all ' + (index + 2) + 's'
+
+
+                        setTimeout(function () {
+                            chec = true
+                            spans[index].style.transition = 'all 0s'
+                            spans[index].style.backgroundPositionY = -numbers * randoms + 35 + 'px'
+                        }, 4000)
+
+                    })
+                }
+            }
+        </script>
+</body>
+
+</html>

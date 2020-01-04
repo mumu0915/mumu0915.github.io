@@ -1,0 +1,248 @@
+body {
+    background: #383b44;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        font-style: normal;
+    }
+
+    ul,
+    li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .stage {
+        width: 350px;
+        margin: 100px auto;
+        perspective:1000px;
+        transform-style: preserve-3d;
+        perspective-origin: 90% 50%;
+        .mp3 {
+            header {
+                background: linear-gradient(lightblue, darksalmon);
+                background-size: cover;
+                width: 100%;
+                height: 235px;
+                padding: 90px 28px 28px;
+                box-sizing: border-box;
+                color: white;
+
+                .music-message {
+                    font-size: 17px;
+
+                    h4 {
+                        font-weight: 800;
+                    }
+
+                    h6 {
+                        margin-top: 5px;
+                        font-weight: 100;
+                    }
+                }
+
+                .music-progress {
+                    margin: 10px 0;
+                    position: relative;
+
+                    .arrow-box {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        box-sizing: border-box;
+                        padding: 10px 0;
+
+                        .arrow {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 5px;
+                            background: gray;
+
+                            .arrow-progress {
+                                width: 0px;
+                                border-radius: 5px;
+                                background: greenyellow;
+                                height: 100%;
+
+                                span {
+                                    display: block;
+                                    width: 10px;
+                                    height: 10px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-50%) translateX(-50%);
+                                    opacity: 0;
+                                }
+                            }
+                        }
+
+                    }
+
+                    input {
+                        width: 100%;
+                        position: relative;
+                        opacity: 0;
+                        z-index: 99;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+
+                        .arrow-box {
+                            .arrow {
+                                .arrow-progress {
+                                    span.scroll {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .music-time {
+                    overflow: hidden;
+                    font-size: 14px;
+
+                    span {
+                        float: left;
+
+                        &:last-child {
+                            float: right;
+                        }
+                    }
+                }
+            }
+
+            .music-list{
+                width: 100%;
+                color: black;
+
+                .music-box {
+                    height: 280px;
+                    background: white;
+                    // overflow: hidden;
+                    ul {
+                        height: 100%;
+                        overflow-y: scroll;
+                        &::-webkit-scrollbar {width: 10px;}
+                        &::-webkit-scrollbar-thumb { background:#f55c5c;border-radius: 5px; }
+                        li {
+                            padding: 10px 30px;
+                            height: 70px;
+                            box-sizing: border-box;
+                            overflow: hidden;
+
+                            h3 {
+                                float: left;
+                                width: 50px;
+                                height: 50px;
+
+                                img {
+                                    width: 100%;
+                                    border-radius: 50%;
+                                    height: 100%;
+                                }
+                            }
+
+                            .music-message {
+                                float: left;
+                                padding-top: 5px;
+                                padding-left: 15px;
+
+                            }
+
+                            &.active {
+                                @keyframes turn {
+                                    form {
+                                        transform: rotateZ(0deg);
+                                    }
+
+                                    to {
+                                        transform: rotateZ(360deg);
+                                    }
+                                }
+
+                                background: #f55c5c;
+                                color: white;
+
+                                h3 {
+                                    animation: turn 3s linear 0s infinite;
+                                }
+                            }
+
+                            &:hover {
+                                background: #f55c5c;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            footer.toggle-music {
+                background: white;
+                overflow: hidden;
+
+                .toggle-btn {
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 20px;
+                    text-align: center;
+                    color: #686d7a;
+
+                    li {
+                        width: 33.33333%;
+                        height: 100%;
+                        float: left;
+
+                    }
+
+                    .pause {
+                        i {
+                            display: none;
+
+                            &.active {
+                                display: block;
+                                margin-top: 15px;
+                                color: #f55c5c;
+                                overflow-y: hidden;
+                            }
+
+                        }
+                    }
+
+                    // .btn-option {
+                    //     padding-left: 10px;
+
+                    //     i {
+                    //         display: none;
+
+                    //         &.active {
+                    //             display: block;
+                    //             margin-top: 15px;
+                    //         }
+
+                    //     }
+                    // }
+
+                    i:hover {
+                        color: #f55c5c;
+
+                    }
+                }
+            }
+        }
+      
+    }
+
+}

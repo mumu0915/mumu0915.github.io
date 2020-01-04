@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./插件/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./audio.css">
+</head>
+
+<body>
+    <div class="stage">
+        <div class="mp3">
+            <header>
+                <audio id="outplay" src="./music/许嵩 - 山水之间.flac"></audio>
+                <div class="music-message">
+                    <h4 class="music-name">歌名</h2>
+                        <h6 class="singer">歌手</h6>
+                </div>
+                <div class="music-progress">
+                    <input type="range" value="0" id="inp">
+                    <div class="arrow-box">
+                        <div class="arrow">
+                            <div class="arrow-progress">
+                                <span class="scroll">
+
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-time">
+                    <span class="now">00:00</span>
+                    <span class="end">00:00</span>
+                </div>
+            </header>
+            <div class="music-list">
+                <div class="music-box">
+                    <ul>
+                        <!-- <li data-url="./music/许嵩 - 山水之间.flac">
+                    <h3><img src="./music/山水之间.jpg" alt=""></h3>
+                    <div class="music-message">
+                        <h4 class="music-name">山水之间</h2>
+                            <h6 class="singer">许嵩vae</h6>
+                    </div>
+                </li> -->
+                    </ul>
+                </div>
+            </div>
+            <footer class="toggle-music">
+                <ul class="toggle-btn">
+                    <!-- <li>
+                    <div class="btn-option">
+                            <i class="fa fa-random" data-order="0"></i>
+                            <i class="fa fa-refresh active" data-order="1"></i>
+                            <i class="fa fa-repeat" data-order="2"></i>
+                    </div>
+                </li> -->
+                    <li class="prev">
+                        <i class="fa fa-backward"></i>
+                    </li>
+                    <li class="pause">
+                        <i class="fa fa-play off active"></i>
+                        <i class="fa fa-pause on"></i>
+                    </li>
+                    <li class="next">
+                        <i class="fa fa-forward"></i>
+                    </li>
+                    <!-- <li class="">
+                    <i></i>
+                </li> -->
+                </ul>
+            </footer>
+        </div>
+    </div>
+    <script src="./插件/jquery-3.4.1.js"></script>
+    <script src="audio.js"></script>
+</body>
+
+</html>

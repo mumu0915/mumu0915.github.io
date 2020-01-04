@@ -1,0 +1,92 @@
+@sm: 768px;
+@md: 992px;
+@lg: 1200px;
+
+.clearfix() {
+    *zoom: 1;
+
+    &::after {
+        content: "";
+        font-size: 0;
+        width: 0;
+        height: 0;
+        visibility: none;
+        clear: both;
+    }
+}
+
+[class*=col-] {
+    float: left;
+}
+
+.box-ss(@s, @n) {
+    .generate-columns(@n, @i: 1) when (@i =< @n) {
+        .col-@{s}-@{i} {
+            width: (@i * 100% / @n);
+        }
+
+        .generate-columns(@n, (@i + 1));
+    }
+
+    .generate-columns(@n);
+}
+
+.row {
+    .box-ss(xs, 12);
+    .clearfix()
+}
+
+
+.container {
+    width: 100%;
+    margin: 0 -15px;
+    padding: 0 15px;
+}
+
+@media screen and (min-wdith:@sm) {
+    .container {
+        width: 100%;
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
+
+    .row {
+        .box-ss(sm, 12);
+
+        .clearfix()
+    }
+}
+
+@media screen and (min-wdith:@md) {
+    .container {
+        width: 960px;
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
+
+    .row {
+        .box-ss(md, 12);
+
+        .clearfix()
+    }
+}
+
+@media screen and (min-wdith:@lg) {
+    .container {
+        width: 1170px;
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
+
+    .row {
+        .box-ss(lg, 12);
+
+        .clearfix()
+    }
+}
+
+
+.container-fluid {
+    padding: 0 15px;
+    margin: 0 auto;
+}

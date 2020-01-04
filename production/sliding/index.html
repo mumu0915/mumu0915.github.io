@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        body{
+            background: rgb(247, 211, 200);
+        }
+        .stage {
+            width: 400px;
+            height: 400px;
+            margin: 50px auto;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        .stage img {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .muscle {
+            /* width: 66.66%; */
+            height: 100%;
+            background: url('./15i68sz.jpg') no-repeat;
+            background-size: auto 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 8;
+        }
+
+        .surface {
+            /* width: 33.33%; */
+            height: 100%;
+            background: url('./2ppni55.jpg') no-repeat;
+            background-size: auto 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .musRange {
+            width: 100%;
+            /* height: 100%; */
+            position: absolute;
+            bottom: 45%;
+            left: 0;
+            z-index: 999;
+            opacity: 0;
+        }
+
+        .surRange {
+            width: 100%;
+            /* height: 100%; */
+            position: absolute;
+            bottom: 55%;
+            left: 0;
+            z-index: 999;
+            opacity: 0;
+        }
+
+        .musSlider {
+            width: 7px;
+            height: 100%;
+            background: #FFAB91;
+            position: absolute;
+            bottom: 0;
+            left: 65.66%;
+            z-index: 99;
+        }
+
+        .musSlider i {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 45%;
+            left: 0;
+            display: block;
+            border: 5px solid #FFAB91;
+            background: white;
+            margin-left: -5px;
+        }
+
+        .surSlider {
+            width: 7px;
+            height: 100%;
+            background: #FFAB91;
+            position: absolute;
+            bottom: 0;
+            left: 33.33%;
+            z-index: 101;
+        }
+
+        .surSlider i {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 55%;
+            left: 0;
+            display: block;
+            border: 5px solid #FFAB91;
+            background: white;
+            margin-left: -5px;
+        }
+    </style>
+    <div class="stage">
+        <img src="./2eo86ew.jpg" alt="">
+        <div class="muscle"></div>
+        <div class="surface"></div>
+        <input class="musRange" type="range" value="66.66">
+        <input class="surRange" type="range" value="33.33">
+        <div class="musSlider"><i></i></div>
+        <div class="surSlider"><i></i></div>
+    </div>
+
+    <script>
+        // var block1 = document.querySelector('.slider1')
+        var muscle = document.querySelector('.muscle')
+        var surface = document.querySelector('.surface')
+        var musRange = document.querySelector('.musRange')
+        var surRange = document.querySelector('.surRange')
+        var musSlider = document.querySelector('.musSlider')
+        var surSlider = document.querySelector('.surSlider')
+        surface.style.width = '33.3%'
+        muscle.style.width = '66.6%'
+
+        // 当滑动滑块1的时候
+        musRange.oninput = function () {
+            // console.log(range1.value)
+            muscle.style.width = musRange.value + '%'
+            musSlider.style.left = musRange.value + '%'
+            // block1.style.left = range1.value + '%'
+            console.log(parseInt(muscle.style.width), parseInt(surface.style.width))
+
+            // 比较两图片 width 的大小
+            if (parseInt(muscle.style.width) < parseInt(surface.style.width)) {
+                surface.style.width = muscle.style.width
+                surSlider.style.left = musSlider.style.left
+                surRange.value = musRange.value
+            }
+        }
+
+        // 当滑动滑块2的时候
+        surRange.oninput = function () {
+            surface.style.width = surRange.value + '%'
+            surSlider.style.left = surRange.value + '%'
+
+            // 比较两图片 width 的大小
+            if (parseInt(muscle.style.width) < parseInt(surface.style.width)) {
+                muscle.style.width = surface.style.width
+                musSlider.style.left = surSlider.style.left
+                musRange.value = surRange.value
+            }
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

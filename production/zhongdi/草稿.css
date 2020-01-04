@@ -1,0 +1,489 @@
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.topbox {
+  background: url('images/banner.jpg') no-repeat;
+  background-size: 100%;
+  padding-top: 10px;
+}
+.topbox #headline {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 240px 0;
+}
+.topbox #headline h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -142px;
+  margin-top: -51px;
+}
+.topbox #headline h1 span {
+  display: block;
+  width: 230px;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+  color: white;
+  font-size: 55px;
+  font-weight: lighter;
+  padding: 10px 0;
+}
+.topbox .floatbox {
+  width: 1140px;
+  background: rgba(0, 0, 0, 0.41);
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  right: 0;
+}
+.topbox .floatbox::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.topbox .floatbox .left ul li {
+  float: left;
+  line-height: 58px;
+  margin-left: 15px;
+}
+.topbox .floatbox .left ul li a {
+  color: white;
+}
+.topbox .floatbox .left ul li a:hover {
+  border-top: 4px solid yellow;
+  color: yellow;
+  transition: all 0.5s;
+}
+.topbox .floatbox .left ul li::after {
+  content: '/';
+  color: white;
+  margin-left: 15px;
+}
+.topbox .floatbox .left ul li:first-child a {
+  border-top: 4px solid yellow;
+}
+.topbox .floatbox .left ul li:last-child:after {
+  content: none;
+}
+.topbox .floatbox .left ul li:first-child a {
+  color: yellow;
+}
+.topbox .floatbox .right {
+  line-height: 58px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.topbox .floatbox .right input {
+  height: 30px;
+}
+.topbox .floatbox .right input:first-child {
+  position: relative;
+  top: 0;
+  left: 0;
+  outline: none;
+  padding: 15px 10px;
+  border: 1px solid white;
+  color: white;
+  background: none;
+}
+.topbox .floatbox .right input:last-child {
+  width: 22px;
+  height: 22px;
+  border: none;
+  position: relative;
+  top: 6px;
+  left: -30px;
+  background: transparent url('images/search.png') center no-repeat;
+}
+.topbox .project {
+  width: 1140px;
+  margin: 0 auto;
+}
+.topbox .project::after {
+  content: '/';
+  color: white;
+  margin-left: 15px;
+}
+.topbox .project .project-tu {
+  float: left;
+  text-align: center;
+  color: white;
+  width: 25%;
+}
+.topbox .project .project-tu li {
+  background: #16A667;
+  padding: 21px 28px;
+  margin: 0 10px;
+}
+.topbox .project .project-tu li h5 {
+  font-size: 20px;
+}
+.topbox .project .project-tu li p {
+  margin-top: 8px;
+}
+.topbox .project .project-tu img {
+  padding: 10px;
+  border: 10px solid white;
+  border-radius: 50%;
+}
+.topbox .project .project-tu img:hover {
+  transform: rotateY(360deg);
+  transition: all 1s;
+}
+.topbox .About-Us {
+  width: 1140px;
+  margin: 0 auto;
+  margin-bottom: 55px;
+}
+.topbox .About-Us::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.topbox .About-Us h3 {
+  font-size: 35px;
+  margin: 45px 0;
+}
+.topbox .About-Us .illustration {
+  width: 40%;
+}
+.topbox .About-Us .illustration img {
+  width: 100%;
+}
+.topbox .About-Us .section {
+  width: 60%;
+}
+.topbox .About-Us .section p {
+  color: #555;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+.bottom-box {
+  background: #333;
+  padding: 56px 0;
+}
+.bottom-box::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.bottom-box .Our-Services {
+  width: 1140px;
+  margin: 0 auto;
+  color: white;
+}
+.bottom-box .Our-Services h3 {
+  font-size: 35px;
+}
+.bottom-box .Our-Services .Services {
+  padding-top: 42px;
+  text-align: center;
+  width: 33.33%;
+}
+.bottom-box .Our-Services .Services li {
+  margin: 0 5px;
+}
+.bottom-box .Our-Services .Services img {
+  background: #16A667;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.bottom-box .Our-Services .Services img:hover {
+  background: orange;
+}
+.bottom-box .Our-Services .Services h5 {
+  font-size: 20px;
+  padding-top: 15px;
+}
+.bottom-box .Our-Services .Services p {
+  color: #999;
+  font-size: 15px;
+}
+.works {
+  padding: 56px 0;
+  background: #eee;
+}
+.works::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.works .poster {
+  width: 1140px;
+  margin: 0 auto;
+}
+.works .poster h3 {
+  font-size: 35px;
+}
+.works .poster ul {
+  margin-top: 42px;
+}
+.works .poster ul li {
+  width: 25%;
+  float: left;
+}
+.works .poster ul li img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.works .poster ul li .figure {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.works .poster ul li .figure:hover::after {
+  transform: scale(1);
+  transition: all 1s;
+}
+.works .poster ul li .figure::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3) url('images/magnify.png') no-repeat center;
+  transform: scale(0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 5px 0 white;
+}
+.bottom-news {
+  margin: 56px 0;
+}
+.bottom-news .newsletter {
+  width: 1140px;
+  margin: 0 auto;
+}
+.bottom-news .newsletter h3 {
+  font-size: 35px;
+}
+.bottom-news .newsletter ul {
+  margin-top: 42px;
+  width: 100%;
+}
+.bottom-news .newsletter ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.bottom-news .newsletter ul li {
+  color: #999;
+  width: 33.33%;
+  float: left;
+}
+.bottom-news .newsletter ul li h5 {
+  color: black;
+  font-size: 23px;
+}
+.bottom-news .newsletter ul li a {
+  color: black;
+}
+.bottom-news .newsletter ul li a:hover {
+  color: #16A667;
+  text-decoration: underline;
+}
+.bottom-news .newsletter ul li a:last-child {
+  display: block;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  width: 30%;
+  padding: 7px 7px;
+  text-decoration: none;
+  background: gold;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.bottom-news .newsletter ul li a:last-child:hover::after {
+  transform: scaleY(0);
+}
+.bottom-news .newsletter ul li a:last-child::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #16A667;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 1s;
+}
+.ourselves {
+  background: #333;
+}
+.ourselves .contact-us {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 56px 0;
+}
+.ourselves .contact-us::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.ourselves .contact-us .Upcome {
+  width: 33.33%;
+  float: left;
+}
+.ourselves .contact-us .Upcome h3 {
+  font-size: 35px;
+  color: white;
+  margin-bottom: 35px;
+}
+.ourselves .contact-us .Upcome li {
+  margin-top: 17px;
+}
+.ourselves .contact-us .Upcome li::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.ourselves .contact-us .Upcome li .fl {
+  display: block;
+  width: 20%;
+  margin-right: 10px;
+}
+.ourselves .contact-us .Upcome li .fl img {
+  width: 100%;
+}
+.ourselves .contact-us .Upcome li h5 {
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+}
+.ourselves .contact-us .Upcome li h5:hover {
+  color: orange;
+  cursor: pointer;
+}
+.ourselves .contact-us .Upcome li p {
+  color: #999;
+}
+.ourselves .contact-us .Upcome .Upcome-2 {
+  color: #999;
+  line-height: 35px;
+}
+.ourselves .contact-us .Upcome .Upcome-2:hover {
+  cursor: pointer;
+  color: orange;
+}
+.ourselves .contact-us .Upcome .Upcome-2 span {
+  margin-right: 10px;
+}
+.ourselves .contact-us .Upcome .Upcome-3 .aaa {
+  display: inline-block;
+  margin: 0;
+  background: url('images/img-sprite1.png');
+  background-position: -295px 0;
+}
+.ourselves .contact-us .Upcome .Upcome-3 .aaa i {
+  display: block;
+  width: 48px;
+  height: 50px;
+}
+.ourselves .contact-us .Upcome .Upcome-3 .aaa:nth-child(1) {
+  background: url('images/img-sprite1.png');
+  background-position: -218px 0;
+}
+.ourselves .contact-us .Upcome .Upcome-3 .aaa:nth-child(3) {
+  background: url('images/img-sprite1.png');
+  background-position: -254px 0;
+}
+.ourselves .contact-us .Upcome .Upcome-3 span {
+  display: block;
+  margin-bottom: 30px;
+}
+.ourselves .contact-us .Upcome .Upcome-3 span p {
+  color: #999;
+}
+.ourselves .contact-us .Upcome .Upcome-3 span p:hover {
+  cursor: pointer;
+  color: orange;
+}
+.ending {
+  margin: 56px 0;
+}
+.ending .ending-down {
+  width: 1140px;
+  margin: 0 auto;
+  text-align: center;
+}
+.ending .ending-down .sprite li {
+  display: inline-block;
+  width: 49px;
+  height: 50px;
+  margin: 0 10px;
+}
+.ending .ending-down .sprite li:nth-child(1) {
+  background: url('images/img-sprite1.png');
+  background-position: -4px -2px;
+}
+.ending .ending-down .sprite li:nth-child(2) {
+  background: url('images/img-sprite1.png');
+  background-position: -58px -2px;
+}
+.ending .ending-down .sprite li:nth-child(3) {
+  background: url('images/img-sprite1.png');
+  background-position: -114px -2px;
+}
+.ending .ending-down .sprite li:nth-child(4) {
+  background: url('images/img-sprite1.png');
+  background-position: -169px -2px;
+}
+.ending .ending-down .ending-theme {
+  text-align: center;
+}
+.ending .ending-down .ending-theme li {
+  display: inline-block;
+  margin: 30px 10px 25px 10px;
+}
+.ending .ending-down .ending-theme li a {
+  color: black;
+}
+.ending .ending-down .producer a {
+  font-size: 20px;
+  color: green;
+}
+.ending .ending-down .producer a:hover {
+  color: black;
+  text-decoration: underline;
+}
+/*# sourceMappingURL=./草稿.css.map */
